@@ -47,23 +47,6 @@
 }
 
 .auth {
-	padding: 8px 12px;
-	font-size: 16px;
-	font-weight: 800;
-	color: white;
-	background: colors.$darker;
-	border-radius: 4px;
-	transition: background 0.3s, transform 0.3s;
-
-	&:hover {
-		background: colors.$dark;
-	}
-
-	&:active {
-		transform: translateY(-2px);
-	}
-}
-
-.authSlash {
-	opacity: 0.7;
+	--color: white;
+	--background-hover: #{transparentize(white, 0.9)};
 }

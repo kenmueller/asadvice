@@ -17,11 +17,11 @@
 .article {
 	flex-grow: 1;
 	max-width: 500px;
+	color: white;
 }
 
 .title {
 	font-size: 60px;
-	color: colors.$darker;
 }
 
 .subtitle {
@@ -32,18 +32,4 @@
 .graph {
 	flex-shrink: 0;
 	width: 100px;
-}
-
-.auth {
-	margin-top: 20px;
-	padding: 8px 16px;
-	font-size: 20px;
-	font-weight: 800;
-	background: colors.$light;
-	border-radius: 4px;
-	transition: opacity 0.3s;
-
-	&:hover {
-		opacity: 0.7;
-	}
 }

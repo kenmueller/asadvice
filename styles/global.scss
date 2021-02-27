@@ -1,3 +1,6 @@
+@use '~@fortawesome/fontawesome-svg-core/styles';
+@use '~react-toastify/dist/ReactToastify';
+
 @use 'styles/sizes';
 
 *,
@@ -21,4 +24,10 @@ button {
 	&:disabled {
 		cursor: default;
 	}
+}
+
+.Toastify__toast {
+	font-weight: bold;
+	padding-left: 16px;
+	border-radius: 5px;
 }

@@ -2,10 +2,13 @@ import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import { RecoilRoot } from 'recoil'
 import Head from 'next/head'
+import { config } from '@fortawesome/fontawesome-svg-core'
 
 import Navbar from 'components/Navbar'
 
 import 'styles/global.scss'
+
+config.autoAddCss = false
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => (
 	<>
