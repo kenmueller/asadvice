@@ -1,0 +1,7 @@
+@use 'styles/sizes';
+
+.root {
+	display: grid;
+	grid: auto 1fr / 1fr;
+	min-height: calc(100vh - #{sizes.$navbar-height});
+}

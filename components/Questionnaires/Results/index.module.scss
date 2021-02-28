@@ -1,0 +1,16 @@
+@use 'styles/sizes';
+@use 'styles/colors';
+
+.root {
+	background: colors.$light;
+}
+
+.content {
+	display: grid;
+	grid: repeat(2, auto) / repeat(3, 1fr);
+	gap: 28px;
+	max-width: sizes.$max-width;
+	width: sizes.$width-ratio;
+	margin: 24px auto;
+	padding: 16px 0 32px;
+}
