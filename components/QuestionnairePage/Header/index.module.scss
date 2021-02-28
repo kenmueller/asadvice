@@ -1,0 +1,51 @@
+@use 'styles/sizes';
+@use 'styles/colors';
+
+.root {
+	background: colors.$purple;
+}
+
+.content {
+	max-width: sizes.$max-width;
+	width: sizes.$width-ratio;
+	margin: 0 auto;
+	padding: 16px 0 32px;
+}
+
+.title {
+	font-size: 60px;
+	color: white;
+}
+
+.description {
+	font-weight: 800;
+	color: white;
+}
+
+.responses {
+	margin-top: 12px;
+	font-weight: 800;
+	color: white;
+	opacity: 0.7;
+}
+
+.automated {
+	margin: 0 6px;
+	vertical-align: -0.25em;
+}
+
+.take {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 8px 16px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 800;
+	color: colors.$purple;
+	background: white;
+	border-radius: 8px;
+}
+
+.takeIcon {
+	margin-right: 8px;
+}
