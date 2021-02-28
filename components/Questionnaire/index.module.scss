@@ -1,0 +1,26 @@
+@use 'styles/colors';
+
+.root {
+	text-decoration: none;
+	color: colors.$darker;
+
+	&:hover .title {
+		text-decoration: underline;
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4px;
+}
+
+.title {
+	font-weight: 800;
+}
+
+.author {
+	font-weight: 700;
+	opacity: 0.5;
+}

@@ -1,0 +1,42 @@
+@use 'styles/sizes';
+@use 'styles/colors';
+
+.root {
+	background: colors.$light;
+}
+
+.content {
+	max-width: sizes.$max-width;
+	width: sizes.$width-ratio;
+	margin: 0 auto;
+	padding: 16px 0 32px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: 800;
+	color: colors.$darker;
+}
+
+.all {
+	text-decoration: none;
+	font-weight: 800;
+	color: transparentize(colors.$darker, 0.5);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.questionnaires {
+	display: grid;
+	grid: repeat(2, auto) / repeat(3, 1fr);
+	gap: 28px;
+	margin-top: 24px;
+}
