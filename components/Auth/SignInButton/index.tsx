@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import cx from 'classnames'
 
-import useSignIn from 'hooks/useSignIn'
+import signIn from 'lib/signIn'
 import Spinner from 'components/Spinner'
 
 import styles from './index.module.scss'
@@ -15,7 +15,6 @@ export interface SignInButtonProps {
 }
 
 const SignInButton = ({ className, disabled }: SignInButtonProps) => {
-	const signIn = useSignIn()
 	const [isLoading, setIsLoading] = useState(false)
 
 	const onClick = useCallback(async () => {
@@ -28,7 +27,7 @@ const SignInButton = ({ className, disabled }: SignInButtonProps) => {
 			setIsLoading(false)
 			toast.error(message)
 		}
-	}, [disabled, isLoading, signIn, setIsLoading])
+	}, [disabled, isLoading, setIsLoading])
 
 	return (
 		<button

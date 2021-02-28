@@ -1,0 +1,60 @@
+@use 'styles/sizes';
+@use 'styles/colors';
+
+.root {
+	background: colors.$purple;
+}
+
+.content {
+	max-width: sizes.$max-width;
+	width: sizes.$width-ratio;
+	margin: 0 auto;
+	padding: 16px 0 32px;
+}
+
+.title {
+	color: white;
+}
+
+.query {
+	position: relative;
+	max-width: max-content;
+	height: 35px;
+	margin: 32px auto 0;
+}
+
+.queryInput {
+	max-width: 100%;
+	width: 500px;
+	height: 100%;
+	padding: 0 12px 0 32px;
+	font-size: 16px;
+	font-weight: 800;
+	color: white;
+	background: transparentize(white, 0.9);
+	border-radius: 8px;
+	transition: background 0.3s;
+
+	&::placeholder {
+		color: transparentize(white, 0.5);
+	}
+
+	&:hover,
+	&:focus {
+		background: transparentize(white, 0.8);
+
+		+ .queryIcon {
+			opacity: 1;
+		}
+	}
+}
+
+.queryIcon {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	pointer-events: none;
+	color: white;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}

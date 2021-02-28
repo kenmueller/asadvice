@@ -1,0 +1,175 @@
+@use 'styles/sizes';
+@use 'styles/colors';
+
+.root {
+	background: colors.$purple;
+}
+
+.content {
+	max-width: sizes.$max-width;
+	width: sizes.$width-ratio;
+	margin: 0 auto;
+	padding: 16px 0 32px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	color: white;
+}
+
+.create {
+	padding: 8px 16px;
+	font-size: 16px;
+	font-weight: 800;
+	color: colors.$purple;
+	background: white;
+	border-radius: 8px;
+	transition: opacity 0.3s;
+
+	&:disabled {
+		opacity: 0.7;
+	}
+}
+
+.label {
+	display: block;
+	margin: 12px 0 4px;
+	font-weight: 800;
+	color: white;
+}
+
+.input,
+.textarea {
+	max-width: 400px;
+	width: 100%;
+	padding: 6px 8px;
+	font-size: 16px;
+	font-weight: 800;
+	color: white;
+	background: transparentize(white, 0.9);
+	border-radius: 8px;
+	transition: background 0.3s;
+
+	&:hover,
+	&:focus {
+		background: transparentize(white, 0.8);
+	}
+}
+
+.textarea {
+	resize: vertical;
+}
+
+.questions {
+	margin-top: 16px;
+}
+
+.question {
+	& + & {
+		margin-top: 12px;
+	}
+}
+
+.questionHeader {
+	display: flex;
+	align-items: center;
+}
+
+.questionTitle {
+	font-weight: 800;
+	color: white;
+}
+
+.removeQuestion {
+	display: flex;
+	margin-left: 12px;
+	font-size: 16px;
+	color: white;
+	background: none;
+}
+
+.questionName {
+	max-width: 400px;
+	width: 100%;
+	margin-top: 8px;
+	padding: 6px 8px;
+	font-size: 16px;
+	font-weight: 800;
+	color: white;
+	background: transparentize(white, 0.9);
+	border-radius: 8px;
+	transition: background 0.3s;
+
+	&:hover,
+	&:focus {
+		background: transparentize(white, 0.8);
+	}
+}
+
+.options {
+	display: flex;
+	margin-top: 12px;
+}
+
+.option {
+	display: flex;
+
+	& + & {
+		margin-left: 20px;
+	}
+}
+
+.optionInput {
+	max-width: 400px;
+	width: 100%;
+	padding: 6px 8px;
+	font-size: 16px;
+	font-weight: 800;
+	color: white;
+	background: transparentize(white, 0.9);
+	border-radius: 8px;
+	transition: background 0.3s;
+
+	&:hover,
+	&:focus {
+		background: transparentize(white, 0.8);
+	}
+}
+
+.removeOption {
+	margin-left: 8px;
+	font-size: 20px;
+	color: white;
+	background: none;
+}
+
+.addOption {
+	margin-left: 20px;
+	font-size: 20px;
+	color: white;
+	background: none;
+}
+
+.addQuestion {
+	margin-top: 20px;
+	padding: 8px 16px;
+	font-size: 16px;
+	font-weight: 800;
+	color: colors.$purple;
+	background: white;
+	border-radius: 8px;
+	transition: opacity 0.3s;
+
+	&:disabled {
+		opacity: 0.7;
+	}
+}
+
+.addQuestionIcon {
+	margin-right: 8px;
+}

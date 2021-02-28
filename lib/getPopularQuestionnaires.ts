@@ -12,7 +12,7 @@ const getPopularQuestionnaires = async (
 ): Promise<Questionnaire[]> => {
 	const { docs: questionnaires } = await firestore
 		.collection('questionnaires')
-		.orderBy('downloads', 'desc')
+		.orderBy('responses', 'desc')
 		.limit(limit)
 		.get()
 

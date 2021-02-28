@@ -2,7 +2,7 @@ export default interface Questionnaire {
 	id: string
 	title: string
 	description: string
-	downloads: number
+	responses: number
 	author: QuestionnaireAuthor
 }
 

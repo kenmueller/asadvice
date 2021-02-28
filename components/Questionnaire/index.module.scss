@@ -1,6 +1,8 @@
 @use 'styles/colors';
 
 .root {
+	display: flex;
+	flex-direction: column;
 	text-decoration: none;
 	color: colors.$darker;
 
@@ -11,7 +13,6 @@
 
 .header {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 4px;
 }
@@ -23,4 +24,16 @@
 .author {
 	font-weight: 700;
 	opacity: 0.5;
+}
+
+.responses {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	font-weight: 800;
+	color: colors.$green;
+}
+
+.automated {
+	margin-left: 4px;
 }

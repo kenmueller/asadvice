@@ -14,6 +14,9 @@ const Navbar = () => {
 				<Link href="/q">
 					<a className={styles.questionnaires}>Questionnaires</a>
 				</Link>
+				<Link href="/new">
+					<a className={styles.new}>Create</a>
+				</Link>
 				<AuthButton className={styles.auth} />
 			</nav>
 		</div>
