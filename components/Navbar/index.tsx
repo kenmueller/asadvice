@@ -11,7 +11,7 @@ const Navbar = () => {
 				<Link href="/">
 					<a className={styles.home}>As Advice</a>
 				</Link>
-				<Link href="/questionnaires">
+				<Link href="/q">
 					<a className={styles.questionnaires}>Questionnaires</a>
 				</Link>
 				<AuthButton className={styles.auth} />
