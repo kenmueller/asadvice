@@ -1,0 +1,22 @@
+@use 'styles/sizes';
+@use 'styles/colors';
+
+.root {
+	padding: 24px 0;
+	background: colors.$light;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: sizes.$max-width;
+	width: sizes.$width-ratio;
+	height: 100%;
+	padding: 16px 0 32px;
+}
+
+.name {
+	font-size: 60px;
+}

@@ -112,7 +112,7 @@ const CreateQuestionnaire: NextPage = () => {
 
 	const [title, setTitle] = useState('')
 	const [description, setDescription] = useState('')
-	const [questions, setQuestions] = useState(() => [createQuestion()])
+	const [questions, setQuestions] = useState(() => [createQuestion(0)])
 
 	const isDisabled =
 		!title ||
@@ -144,11 +144,15 @@ const CreateQuestionnaire: NextPage = () => {
 
 			const batch = firestore.batch()
 
-			for (const { id, name, options } of questions)
+			for (let i = 0; i < questions.length; i++) {
+				const { id, name, options } = questions[i]
+
 				batch.set(questionnaire.collection('questions').doc(id), {
+					index: i,
 					name,
 					options
 				})
+			}
 
 			await batch.commit()
 			await Router.push(`/q/${questionnaire.id}`)
@@ -202,7 +206,10 @@ const CreateQuestionnaire: NextPage = () => {
 				<button
 					className={styles.addQuestion}
 					onClick={() => {
-						setQuestions(questions => [...questions, createQuestion()])
+						setQuestions(questions => [
+							...questions,
+							createQuestion(questions.length)
+						])
 					}}
 				>
 					<FontAwesomeIcon className={styles.addQuestionIcon} icon={faPlus} />

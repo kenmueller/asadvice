@@ -7,10 +7,10 @@ const Header = () => (
 	<div className={styles.root}>
 		<header className={styles.content}>
 			<article className={styles.article}>
-				<h1 className={styles.title}>abc abc abc</h1>
+				<h1 className={styles.title}>Innovative Questionnaires</h1>
 				<p className={styles.subtitle}>
-					abc abc abc abc abc abc abc abc abc abc abc abc abc abc abc abc abc
-					abc abc abc abc abc abc abc
+					An intelligent algorithm that gives you personalized and pragmatic
+					advice from nothing but a few simple questions
 				</p>
 			</article>
 			<Svg className={styles.graph} src={graph} />
